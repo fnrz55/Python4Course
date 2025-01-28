@@ -1,12 +1,12 @@
-from Lab20.TickTack import TickTack
-from Lab20.TickTack_th import TickTackThread
+from TickTack_th import TickTackThread
+from TickTack import TickTack
 
-ttob = TickTack()
-thrd1 = TickTackThread('tick', ttob)
-thrd2 = TickTackThread('tack', ttob)
+tt = TickTack()
+flow1 = TickTackThread("tick", tt)
+flow2 = TickTackThread("tack", tt)
 
 try:
-    thrd1.join()
-    thrd2.join()
-except InterruptedError:
-    print('Прерывание основного потока')
+    flow1.join()
+    flow2.join()
+except KeyboardInterrupt:
+    print("Прерывание основного потока")

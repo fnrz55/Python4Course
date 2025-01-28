@@ -1,6 +1,6 @@
 import time
 
-from Lab20.Num2Th import Num2Thread
+from Num2Th import Num2Thread
 
 print("Основной поток запущен")
 
