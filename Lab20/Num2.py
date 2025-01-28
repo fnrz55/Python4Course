@@ -9,7 +9,6 @@ mt2 = Num2Thread("Низкий приоритет")
 
 mt1.start()
 mt2.start()
-time.sleep(0.5)
 
 try:
     mt1.join()
@@ -17,5 +16,5 @@ try:
 except InterruptedError:
     print("Главный поток приостановлен")
 
-print(f"Поток с высоким приоритетом насчитал {mt1.count}")
-print(f"Поток с низким приоритетом насчитал {mt2.count}")
+print(f"Поток с высоким приоритетом считается {mt1.count}")
+print(f"Поток с низким приоритетом считается {mt2.count}")

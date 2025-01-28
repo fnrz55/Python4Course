@@ -19,7 +19,7 @@ class Num2Thread(Thread):
             self.count += 1
             if Num2Thread.current_name != self.name:
                 Num2Thread.current_name = self.name
-                print(f"В потоке {self.current_name} \n")
+                print(f"В потоке {self.current_name}")
             if self.stop or self.count >= 1e6:
                 break
         self.stop = True
