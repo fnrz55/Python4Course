@@ -1,7 +1,7 @@
 from itertools import count
 from threading import Thread
 
-class Num7Cl(Thread):
+class Num2Thread(Thread):
     def __init__(self, name):
         super().__init__(name=name)
         self.count = 0
@@ -17,6 +17,5 @@ class Num7Cl(Thread):
             if self.current_name != self.name:
                 self.current_name = self.name
                 print(f"В потоке {self.current_name}")
-
-    def stop(self):
-        self.stop = False
+        self.stop = True
+        print(f'Поток {self.name} прекратил исполнение')
