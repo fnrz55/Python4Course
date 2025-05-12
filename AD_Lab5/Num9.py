@@ -12,7 +12,7 @@ data['Женщины'] = [1/val for val in data['Женщины']]
 data['Мужчины'] = [1/val for val in data['Мужчины']]
 
 plt.subplot(1, 2, 1)
-plt.pie(data['Женщины'])
+plt.pie(data['Женщины'], autopct='%.2f')
 plt.legend( data['Возрастные группы'])
 
 plt.title('Риск смерти у женщин')
